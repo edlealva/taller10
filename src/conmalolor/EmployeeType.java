@@ -7,6 +7,8 @@ package conmalolor;
 
 /**
  *
+<<<<<<< HEAD
  * @author CltControl
  */
 public enum EmployeeType { Worker, Supervisor, Manager }
+
