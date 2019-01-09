@@ -9,6 +9,6 @@ package conmalolor;
  *
  * @author Patricio
  */
-public class EmployeeType {
-    
+public enum EmployeeType { Worker, Supervisor, Manager
+
 }
