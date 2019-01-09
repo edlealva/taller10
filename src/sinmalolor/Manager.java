@@ -5,6 +5,10 @@
  */
 package sinmalolor;
 
+import java.time.LocalDate;
+import java.time.ZoneId;
+import java.util.Date;
+
 /**
  *
  * @author Patricio
@@ -13,12 +17,17 @@ public class Manager extends Employee{
 
     @Override
     float cs() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        Date date = new Date();
+        LocalDate localDate = date.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
+        //Obtiene el mes en forma de entero
+        int month = localDate.getMonthValue();
+        float valueM = salary + (bonusPercentage * 0.7F);
+        return month%2==0?valueM:valueM + rmu/12*2;
     }
 
     @Override
     float calculateYearBonus() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return salary + salary * 1.0F;
     }
     
 

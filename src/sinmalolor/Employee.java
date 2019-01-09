@@ -22,13 +22,13 @@ import java.util.Date;
 
 public abstract class Employee
 {   
-    private final float rmu = (float) 386.0;
+    protected final float rmu = (float) 386.0;
     //salario del employee
-    private float salary;
+    protected float salary;
     //porcentaje de bonus
-    private float bonusPercentage;    
+    protected float bonusPercentage;    
     //variable de tipo employeeType
-    private EmployeeType employeeType;    
+    protected EmployeeType employeeType;    
     abstract float cs();
     abstract  float calculateYearBonus();
 

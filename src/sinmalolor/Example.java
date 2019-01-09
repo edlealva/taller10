@@ -14,50 +14,16 @@ import java.util.List;
 public class Example {
     
     public List<Cliente> clientes;
-    public List<Employee> empleados;
+    
     
     public void MostrarInformacion(Cliente cliente){
-        if(cliente.Nombre.equals("") && cliente.Nombre.length()> 16){
-                System.out.println("ingreso de nombre incorrecto");
-        }else{
-            System.out.println("ingreso de nombre correcto");
-
-        }
-        if(cliente.Apellido.equals("") && cliente.Apellido.length()> 16){
-            System.out.println("ingreso de apellido incorrecto");
-        }else{
-            System.out.println("ingreso de apellido correcto");
-
-        }
-        if(!cliente.Cedula.equals("") && cliente.Cedula.length()< 10){
-            System.out.println("ingreso de cedula incorrecto");
-        }else{
-            System.out.println("ingreso de cedula correcto");
-
-        }
+        this.validarInformacion(cliente.Nombre, cliente.Apellido, cliente.Cedula);
         System.out.println("Nombre: " + cliente.Nombre + ", Apellido: " + cliente.Apellido + ", con numero de cedula: " + cliente.Cedula );
         
     }
     
     public void GuardarCliente(String Nombre, String Apellido, String Cedula){
-        if(Nombre.equals("") && Nombre.length()> 16){
-                System.out.println("ingreso de nombre incorrecto");
-        }else{
-            System.out.println("ingreso de nombre correcto");
-
-        }
-        if(Apellido.equals("") && Apellido.length()> 16){
-            System.out.println("ingreso de apellido incorrecto");
-        }else{
-            System.out.println("ingreso de apellido correcto");
-
-        }
-        if(!Cedula.equals("") && Cedula.length()< 10){
-            System.out.println("ingreso de cedula incorrecto");
-        }else{
-            System.out.println("ingreso de cedula correcto");
-
-        }
+        this.validarInformacion(Nombre, Apellido, Cedula);
         Cliente cliente = new Cliente(Nombre, Apellido, Cedula);
         this.clientes.add(cliente);
         System.out.println(Nombre +" " + Apellido + "ha sido agregado como nuevo cliente");
@@ -65,19 +31,19 @@ public class Example {
     }
     
     public void validarInformacion(String Nombre, String Apellido, String Cedula ){
-        if(Nombre.equals("") && Nombre.length()> 16){
+        if(checkName(Nombre)){
             System.out.println("ingreso de nombre incorrecto");
         }else{
             System.out.println("ingreso de nombre correcto");
             
         }
-        if(Apellido.equals("") && Apellido.length()> 16){
+        if(checkName(Apellido)){
             System.out.println("ingreso de apellido incorrecto");
         }else{
             System.out.println("ingreso de apellido correcto");
             
         }
-        if(!Cedula.equals("") && Cedula.length()< 10){
+        if(!checkCI(Cedula)){
             System.out.println("ingreso de cedula incorrecto");
         }else{
             System.out.println("ingreso de cedula correcto");
@@ -86,5 +52,11 @@ public class Example {
         
     }
     
-    
+    private boolean checkName(String data){
+        return "".equals(data)&&data.length()>16;
+    }
+    private boolean checkCI(String ci){
+        
+        return "".equals(ci)&&ci.length()<10;
+    }
 }
