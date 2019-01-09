@@ -3,14 +3,21 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Comments;
+package conmalolor;
 
+import java.time.LocalDate;
+import java.time.ZoneId;
+import java.util.Date;
 
-public enum EmployeeType { Worker, Supervisor, Manager }
+/**
+ *
+ * @author CltControl
+ */
+
 
 public class Employee
 {   
-    private final float rmu = 386.0;
+    private final float rmu = (float) 386.0;
     //salario del employee
     private float salary;
     //porcentaje de bonus
