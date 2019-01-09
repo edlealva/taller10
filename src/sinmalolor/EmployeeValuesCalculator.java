@@ -5,13 +5,10 @@
  */
 package sinmalolor;
 
-import conmalolor.*;
-
 /**
  *
-<<<<<<< HEAD
- * @author CltControl
+ * @author Patricio
  */
-public enum EmployeeType { Worker, Supervisor, Manager }
-
-
+public class EmployeeValuesCalculator {
+    
+}

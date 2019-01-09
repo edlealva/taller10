@@ -5,7 +5,6 @@
  */
 package sinmalolor;
 
-import conmalolor.*;
 import java.util.List;
 
 

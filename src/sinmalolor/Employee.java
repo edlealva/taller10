@@ -6,12 +6,6 @@
 package sinmalolor;
 
 
-import conmalolor.*;
-import java.time.LocalDate;
-import java.time.ZoneId;
-import java.util.Date;
-
-
 
 
 /**
@@ -28,7 +22,7 @@ public abstract class Employee
     //porcentaje de bonus
     protected float bonusPercentage;    
     //variable de tipo employeeType
-    protected EmployeeType employeeType;    
+      
     abstract float cs();
     abstract  float calculateYearBonus();
 
