@@ -12,3 +12,4 @@ package conmalolor;
  */
 public enum EmployeeType { Worker, Supervisor, Manager }
 
+
