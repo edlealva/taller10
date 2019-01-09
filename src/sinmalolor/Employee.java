@@ -20,7 +20,7 @@ import java.util.Date;
  */
 
 
-public class Employee
+public abstract class Employee
 {   
     private final float rmu = (float) 386.0;
     //salario del employee
@@ -29,17 +29,14 @@ public class Employee
     private float bonusPercentage;    
     //variable de tipo employeeType
     private EmployeeType employeeType;    
+    abstract float cs();
+    abstract  float calculateYearBonus();
 
-    public Employee(float salary, float bonusPercentage, EmployeeType employeeType)    
-    {        
-        this.salary = salary;        
-        this.bonusPercentage = bonusPercentage;        
-        this.employeeType = employeeType;    
-    }    
+    
     //calcula el salario dependiendo del tipo de trabajador y entrega el décimo correspondiente cada 2 meses
-    public float cs()
-    {
-        Date date = new Date();
+   
+    
+       /* Date date = new Date();
         //Obtiene la hora local
         LocalDate localDate = date.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
         //Obtiene el mes en forma de entero
@@ -59,8 +56,10 @@ public class Employee
                 return month%2==0?valueM:valueM + rmu/12*2;
         }
         return 0.0F;
-    }
+*/
+    
     //calcula el bonus anual
+  /*
     public float CalculateYearBonus() 
     {
         switch (employeeType)
@@ -73,5 +72,6 @@ public class Employee
                 return salary + salary * 1.0F;
         }
         return 0.0F;
-    }
+    } 
+*/
 }

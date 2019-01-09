@@ -5,8 +5,6 @@
  */
 package sinmalolor;
 
-import conmalolor.*;
-
 
 public class Cliente {
     public String Nombre;
@@ -16,7 +14,7 @@ public class Cliente {
     private String pais;
     private String ciudad;
     private String direccion;
-    private String telefono;
+    
     
     public Cliente(String Nombre, String Apellido, String Cedula) {
         this.Nombre = Nombre;
