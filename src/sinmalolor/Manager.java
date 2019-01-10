@@ -15,21 +15,10 @@ import java.util.Date;
  */
 public class Manager extends Employee{
 
-    @Override
-    float cs() {
-        Date date = new Date();
-        LocalDate localDate = date.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
-        //Obtiene el mes en forma de entero
-        int month = localDate.getMonthValue();
-        float valueM = salary + (bonusPercentage * 0.7F);
-        return month%2==0?valueM:valueM + rmu/12*2;
+    public Manager(float salary, float bonusPercentage) {
+        super(salary, bonusPercentage);
+        this.value = salary + (bonusPercentage * 0.7F);
+        this.bonusConstant = 1.0F;
     }
 
-    @Override
-    float calculateYearBonus() {
-        return salary + salary * 1.0F;
-    }
-    
-
-    
 }

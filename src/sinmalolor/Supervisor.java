@@ -13,25 +13,12 @@ import java.util.Date;
  *
  * @author Patricio
  */
-public class Supervisor extends Employee{
+public class Supervisor extends Employee{    
 
-    @Override
-    float cs() {
-                Date date = new Date();
-        LocalDate localDate = date.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
-        //Obtiene el mes en forma de entero
-        int month = localDate.getMonthValue();
-        float valueS = salary + (bonusPercentage * 0.5F);
-                //Si el mes es impar entonces le entrega el decimo junto con su salario y un bono
-        return month%2==0?valueS:valueS + rmu/12*2;
+    public Supervisor(float salary, float bonusPercentage) {
+        super(salary, bonusPercentage);
+        this.value = salary + (bonusPercentage * 0.5F);
+        this.bonusConstant = 0.7F;
     }
-
-    @Override
-    float calculateYearBonus() {
-        
-        return salary + salary * 0.7F;
-    }
-    
-
     
 }
