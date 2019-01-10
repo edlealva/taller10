@@ -55,17 +55,5 @@ public class Location {
     public void setDireccion(String direccion) {
         this.direccion = direccion;
     }
-    
-     public String mostrarLocation(){
-        String dir = pais + " - " + provincia + " - " + ciudad;
-        return  dir+ "\n" + direccion;
-    }
-    
-    public void setLocation(String nuevoPais, String ciudadnueva, String provinciaNueva, String direccionNueva){
-        pais = nuevoPais;
-        ciudad = ciudadnueva;
-        provincia = provinciaNueva;
-        direccion = direccionNueva;
-    }
 
 }

@@ -42,4 +42,15 @@ public class Cliente {
         this.Cedula = Cedula;
     }
     
+    public String mostrarLocation(){
+        String dir = location.getPais() + " - " + location.getProvincia() + " - " + location.getCiudad();
+        return  dir+ "\n" + location.getDireccion();
+    }
+    
+    public void setLocation(String nuevoPais, String ciudadnueva, String provinciaNueva, String direccionNueva){
+        location.setPais(nuevoPais);
+        location.setCiudad(ciudadnueva);
+        location.setProvincia(provinciaNueva);
+        location.setDireccion(direccionNueva);
+    }
 }
